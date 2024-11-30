@@ -1,0 +1,23 @@
+def main():
+    playlist = Playlist()
+
+    while True:
+        display_menu()  # Display the menu before every action
+        choice = input("Enter your choice (1-6): ")
+
+        if choice == '1':
+            song = input("Enter the song name you want to add: ")
+            playlist.add_song(song)  # Add song to playlist directly
+        elif choice == '2':
+            playlist.add_from_library()  # Add a song from the library to playlist
+        elif choice == '3':
+            playlist.remove_song()  # Remove a song from the playlist
+        elif choice == '4':
+            playlist.view_playlist()  # View all songs in the playlist
+        elif choice == '5':
+            playlist.play_song()  # Play a song from the playlist
+        elif choice == '6':
+            print("Exiting the program. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
